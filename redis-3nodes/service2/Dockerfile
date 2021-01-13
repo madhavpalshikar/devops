@@ -1,9 +1,9 @@
 FROM node:10-alpine
 
-WORKDIR /app
+COPY . .
 
 RUN npm install
 
-COPY . ./app
+EXPOSE 8302
 
 CMD ["npm", "start"]
