@@ -1,0 +1,17 @@
+
+# prometheus docker
+
+docker service create --replicas 1 --name my-prometheus --mount type=bind,source=C:/temp/prometheus.yml,destination=/etc/prometheus/prometheus.yml --publish published=9090,target=9090,protocol=tcp prom/prometheus
+
+# Node Exporter docker 
+
+docker run -d --net="host" --pid="host" -v "C:/:/host:ro,rslave" quay.io/prometheus/node-exporter:latest --path.rootfs=/host
+
+# graphana docker 
+
+docker run -d -p 3000:3000 grafana/grafana
+
+# graphana dashboard 
+Prometheus Node Exporter Full:
+https://grafana.com/grafana/dashboards/1860?pg=dashboards&plcmt=featured-sub1
+1860
