@@ -14,4 +14,4 @@ docker run -d -p 3000:3000 grafana/grafana
 # graphana dashboard 
 Prometheus Node Exporter Full:
 https://grafana.com/grafana/dashboards/1860?pg=dashboards&plcmt=featured-sub1
-1860
+1860 
